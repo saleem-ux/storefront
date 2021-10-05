@@ -1,0 +1,35 @@
+#Category{
+    margin-left: 10px;
+    color: rgb(119, 114, 114);
+}
+
+#Button{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#desc {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(134, 134, 134);
+  }
+  
+  #nav-bar {
+    color: #ffffff !important;
+    background-color: #0c22af;
+    text-align: center;
+  
+
+  }
+  
+  #cards-container {
+    display: inline-flex;
+  }
+  .card-ui {
+    margin: 0.5rem;
+    width: 25rem;
+  }
+  body {
+    padding: 1rem;
+   background-color: rgb(221, 216, 216);
+  }
