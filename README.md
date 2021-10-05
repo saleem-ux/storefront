@@ -139,11 +139,9 @@ The user stories from Phases 1 and 2 remain unchanged. For this phase, we are no
    * ### https://dunia-store-server.herokuapp.com/product
    * ### https://dunia-store-server.herokuapp.com/cartItem
 
-* ### [store-server-repo]()   
-
 * ### [code sand box /Phase 3]()
 
-* ### [lab 38 pull request ]()
+* ### [lab 38 pull request ](https://github.com/saleem-ux/storefront/pull/3)
 
 ## UML : 
 
