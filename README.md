@@ -28,7 +28,7 @@ The following user/developer stories detail the major functionality for this pha
 
 * ### [code sand box /Phase 1]()
 
-* ### [lab 31 pull request ]()
+* ### [lab 31 pull request ](https://github.com/saleem-ux/storefront/pull/1)
 
 ## UML : 
 
