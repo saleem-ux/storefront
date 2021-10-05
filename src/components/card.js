@@ -7,6 +7,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { useSelector, useDispatch } from 'react-redux';
+import { addToCart } from '../reducer/actions';
 
 const useStyles = makeStyles({
     root: {
@@ -19,7 +21,13 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
     const classes = useStyles();
-
+    const state = useSelector((state) => state);
+    const dispatch = useDispatch();
+    function addToCartHandler(productName) {
+        if (!state.cart.cartProducts.includes(productName)) {
+            dispatch(addToCart(productName));
+        }
+    }
     return (
         <Card className={classes.root} className='card-ui'>
             <CardActionArea>
@@ -35,18 +43,15 @@ export default function MediaCard(props) {
                         Price : {props.product.price}
                     </Typography>
                     <Typography gutterBottom variant='h6' component='h6'>
-                        available : {props.product.inventoryCount} pieces
+                        in stock : {props.product.inventoryCount} pieces
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            {/* <CardActions>
-        <Button size='small' color='primary'>
-          Share
-        </Button>
-        <Button size='small' color='primary'>
-          Learn More
-        </Button>
-      </CardActions> */}
+            <CardActions>
+                <Button id='addButton' variant="contained" color="primary" onClick={() => addToCartHandler(props.product.name)} size='small' color='primary'>
+                    ADD To Cart
+                </Button>
+            </CardActions>
         </Card>
     );
 }

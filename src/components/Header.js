@@ -4,14 +4,18 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+    const state = useSelector((state) => state);
+
     return (
         <>
-            <ButtonAppBar />
+            <ButtonAppBar state={state} />
         </>
     );
 }
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -24,8 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
-function ButtonAppBar() {
+function ButtonAppBar(props) {
     const classes = useStyles();
 
     return (
@@ -36,7 +39,7 @@ function ButtonAppBar() {
                     <Typography variant='h4' className={classes.title}>
                         OUR STORE
                     </Typography>
-                    {/* <Button color="inherit">Login</Button> */}
+                    <h3>Cart ({props.state.cart.cartProducts.length})</h3>
                 </Toolbar>
             </AppBar>
         </div>
