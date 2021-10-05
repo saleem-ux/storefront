@@ -28,8 +28,8 @@ function ButtonAppBar() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root} id='footer'>
-            <AppBar id='nav-bar' position='static'>
+        <div className={classes.root} >
+            <AppBar position='static' id='footer'>
                 <Toolbar>
                     <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'></IconButton>
                     <h3>all Rights reserved @ Saleem Diab 2021</h3>

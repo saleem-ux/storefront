@@ -1,19 +1,34 @@
-export const initialState = {
-    cartProducts: [],
-};
+let initialState = {
+    cart: [],
+    cartCounter: 0
+}
 
-export const cartReducer = (state = initialState, action) => {
-    const { type, payload } = action;
+const changeCart = (state = initialState, action) => {
+    let { type, payload } = action;
 
     switch (type) {
-        case 'ADD_TO_CART':
-            return { cartProducts: [...state.cartProducts, payload] };
-        case 'DELETE_FROM_CART':
-            const cartProducts = state.cartProducts.filter((product) => product != payload);
 
-            return { cartProducts };
+        case 'ADDCART':
+            let cartCounter = state.cartCounter + 1;
+            let cart = state.cart;
+            cart.push(payload);
+
+            return { cart, cartCounter };
+
+        case 'REMOVECART':
+            let cartCount = state.cartCounter - 1;
+            let tempCart = state.cart.filter(item => item.name !== payload.name);
+
+            return { cart: tempCart, cartCounter: cartCount };
+
+        case 'GETCART':
+            let fetchedProds = payload;
+
+            return { cart: fetchedProds, cartCounter: payload.length };
 
         default:
             return state;
     }
-};
+}
+
+export default changeCart;

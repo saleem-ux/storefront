@@ -1,53 +1,123 @@
+#tittle{
+  text-align: center;
+  font-family: 'Roboto'
+}
 #Category{
-    margin-left: 10px;
-    color: rgb(119, 114, 114);
+  margin-left: 10px;
+  color: rgb(119, 114, 114);
 }
 
-#Button{
-    margin-left: 20px;
-    margin-bottom: 20px;
+#Button1{
+  margin-left: 2px;
+  margin-bottom: 20px;
+}
+#Button2{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+#Button3{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 30px;
+  font-weight: 300;
+  color: rgb(134, 134, 134);
+  text-align: center;
+}
+
+#nav-bar {
+  color: #ffffff !important;
+  background-color: #0c22af;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ margin-left: 400px;
+ font-family: 'Roboto'
+
+
+}
+
+body {
+  padding: 1rem;
+ background-color: rgb(221, 216, 216);
+ font-family: 'Roboto'
+}
+
+#simple-cart {
+  position: sticky;
+  float: right;
 }
 
 
+.Select{
+    font-size: xx-large;
+    font-weight: bolder;
+    
+}
 
-#desc {
-    font-size: 30px;
-    font-weight: 300;
-    color: rgb(134, 134, 134);
-  }
+.breadcrumbs {
+  margin-top: 6rem;
   
-  #nav-bar {
-    color: #ffffff !important;
-    background-color: #0c22af;
-    text-align: center;
-  
+ 
+}
 
-  }
-  
-  #cards-container {
-    display: inline-flex;
-  }
-  .card-ui {
-    margin: 0.5rem;
-    width: 25rem;
-  }
-  body {
-    padding: 1rem;
-   background-color: rgb(221, 216, 216);
-  }
+a:hover {
+  cursor: pointer;
+}
 
-  #simple-cart {
-    position: sticky;
-    float: right;
-  }
+.products {
+  max-width: 2000px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  min-height: 70vh;
+  flex-direction: column;
+}
+
+.active {
   
-  #li {
-    width: 10rem;
-    margin: 0.25rem;
-    margin-top: 1rem;
-  }
-  #li button {
-    float: right;
-    background-color: #0c22af;
-    color: whitesmoke;
-  }
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 10px;
+} 
+
+
+
+.cart {
+  position: absolute;
+  top: 25px;
+  right: 14px;
+
+}
+
+.cart-button {
+  border: solid;
+  border-style:none;
+  box-shadow: none;
+ 
+
+}
+
+#card {
+ margin-top: 40px;
+ margin-left:40px;
+display: inline-block;
+width:300px;
+border: solid;
+
+}
+
+#footer{
+  color: #ffffff !important;
+  background-color: #0c22af;
+  padding-top: 10px;
+margin-bottom: -5px;
+  width: 9600px;
+  margin-left: -30px;
+  font-family: 'Roboto'
+}

@@ -1,21 +1,22 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Category from './components/Category';
+import Categories from './components/Category';
 import Products from './components/Products';
-import SimpleCart from './components/SimpleCart ';
+import Header from './components/Header';
+import ActiveCategory from './components/current-category';
+import Footer from './components/Footer';
+import Container from '@material-ui/core/Container';
 
 function App() {
     return (
         <>
             <Header />
-            <SimpleCart />
-            <Category />
-            <Products />
+            <Container minHeight="100 vh">
+                <Categories />
+                <ActiveCategory />
+                <Products />
+            </Container>
             <Footer />
         </>
-
     );
 }
 
