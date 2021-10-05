@@ -8,6 +8,8 @@
     margin-bottom: 20px;
 }
 
+
+
 #desc {
     font-size: 30px;
     font-weight: 300;
@@ -32,4 +34,20 @@
   body {
     padding: 1rem;
    background-color: rgb(221, 216, 216);
+  }
+
+  #simple-cart {
+    position: sticky;
+    float: right;
+  }
+  
+  #li {
+    width: 10rem;
+    margin: 0.25rem;
+    margin-top: 1rem;
+  }
+  #li button {
+    float: right;
+    background-color: #0c22af;
+    color: whitesmoke;
   }

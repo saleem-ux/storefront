@@ -25,7 +25,7 @@ function Category(props) {
     );
 }
 const mapStateToProps = (state) => {
-    console.log('STATE============>', state);
+    console.log('STATE=====>', state);
     return state.cat;
 };
 const mapDispatchToProps = { selectCategory };

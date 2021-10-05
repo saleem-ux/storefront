@@ -6,7 +6,7 @@ export const categories = [
 export const products = [
     {
         category: 'ELECTRONICS',
-        name: 'Access Control System',
+        name: 'Access Control ',
         description: 'physical hardware that an access control system needs to enforce these rules',
         price: '100$',
         inventoryCount: 50,
@@ -22,7 +22,7 @@ export const products = [
     },
     {
         category: 'ELECTRONICS',
-        name: 'Portable Laptop Charger',
+        name: 'Laptop Charger',
         description: '32000mAh 100W PD Power Bank, External Battery Pack with 1 USB-C PD3.0 Port, 2 DC Ports, 2 USB QC3.0 Ports for Laptops, Tablets, Smartphones and Other Devices',
         price: '35$',
         inventoryCount: 7,
