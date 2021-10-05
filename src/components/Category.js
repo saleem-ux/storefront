@@ -1,32 +1,34 @@
 import React from 'react';
+
+import Button from '@material-ui/core/Button';
+import '../App.css';
+
 import { connect } from 'react-redux';
-import { selectCategory } from '../reducer/actions';
-import { Button } from '@material-ui/core';
+import * as actions from '../reducer/actions'
 
-function Category(props) {
-    function onClickHandler(categoryName) {
-        props.selectCategory(categoryName);
-    }
+const Categories = props => {
     return (
-        <>
-            <h2 id='Category'>Select Category:</h2>
-            {props.categories.map((cat) => (
-                <>
-                    <Button id='Button' variant="contained" color="primary" onClick={() => onClickHandler(cat.normalizedName)}>
-                        {cat.normalizedName}
-                    </Button>
-                </>
-            ))}
 
-            {props.activeCategory.normalizedName && <h2>Active Category : {props.activeCategory.normalizedName}</h2>}
+        <section className="breadcrumbs">
+            <p className='Select' >Select Category:</p>
+            <>
+                <Button id="Button1" size="large" variant="contained" color="primary" onClick={() => props.get()}>ALL</Button>
+                <Button id="Button2" size="large" variant="contained" color="primary" onClick={() => props.food()}>FOOD</Button>
+                <Button id="Button3" size="large" variant="contained" color="primary" onClick={() => props.electronics()}>ELECTRONICS</Button>
+            </>
 
-            {props.activeCategory.normalizedName && <h4 id='desc'> {props.activeCategory.description}</h4>}
-        </>
-    );
+        </section>
+    )
 }
-const mapStateToProps = (state) => {
-    console.log('STATE=====>', state);
-    return state.cat;
-};
-const mapDispatchToProps = { selectCategory };
-export default connect(mapStateToProps, mapDispatchToProps)(Category);
+
+const mapStateToProps = state => ({
+    state
+})
+
+const mapDispatchToProps = (dispatch, getState) => ({
+    get: () => dispatch(actions.getRemoteData()),
+    food: () => dispatch(actions.getFood()),
+    electronics: () => dispatch(actions.getElectronics())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);
